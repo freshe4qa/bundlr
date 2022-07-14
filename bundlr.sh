@@ -26,14 +26,14 @@ sleep 2
 
 PS3='Select an action: '
 options=(
-"Install(1)"
-"Install(2)"
+"Install1"
+"Install2"
 "Exit")
 select opt in "${options[@]}"
 do
 case $opt in
 
-"Install(1)")
+"Install1")
 echo "============================================================"
 echo "Install start"
 echo "============================================================"
@@ -66,7 +66,7 @@ git clone --recurse-submodules https://github.com/Bundlr-Network/validator-rust.
 break
 ;;
 
-"Install(2)")
+"Install2")
 
 tee $HOME/validator-rust/.env > /dev/null <<EOF
 PORT=80
